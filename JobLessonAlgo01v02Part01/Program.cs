@@ -17,10 +17,11 @@ namespace JobLessonAlgo01v02Part01
             while (i < number)
             {
                 if (number % i == 0)
-                { 
+                {
                     d++;
-                }
+                }               
                 i++;
+                
             }
 
             string expected;
@@ -72,14 +73,14 @@ namespace JobLessonAlgo01v02Part01
             };
             var testCase2 = new TestCase()
             {
-                Number = 2,
-                Expected = "Число 2 - Простое число",
+                Number = 7,
+                Expected = "Число 7 - Простое число",
                 ExpectedException = null
             };
             var testCase3 = new TestCase()
             {
-                Number = 16452,
-                Expected = "Число 16452 - Не простое число",
+                Number = 9,
+                Expected = "Число 9 - Не простое число",
                 ExpectedException = null
             };
             var testCase4 = new TestCase()
