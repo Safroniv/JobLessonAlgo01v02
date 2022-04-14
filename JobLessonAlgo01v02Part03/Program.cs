@@ -10,6 +10,9 @@ namespace JobLessonAlgo01v02Part03
     {
         static void Main(string[] args)
         {
+
+
         }
+
     }
 }
