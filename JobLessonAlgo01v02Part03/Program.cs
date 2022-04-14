@@ -6,30 +6,48 @@ using System.Threading.Tasks;
 
 namespace JobLessonAlgo01v02Part03
 {
-    internal class Program
+    internal class Program : ProgramBase
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            //Написать программу, вычисляющую число Фибоначчи для заданного значения рекурсивным способом. 
-            int number01 = 5;
-            Console.WriteLine(GetFibonacci(number01));
-            int number02 = 10;
-            Console.WriteLine(GetFibonacci(number02));
-            int number03 = 20;
-            Console.WriteLine(GetFibonacci(number03));
-            int number04 = 0;
-            Console.WriteLine(GetFibonacci(number04));
-            int number05 = -1;
-            Console.WriteLine(GetFibonacci(number05));
-        }
-        //Вычисление числа Фибоначчи рекурсивным способом
-        static int GetFibonacci(int number)
-        {
-            if (number == 0 || number == 1)
+            //Программа, вычисляющая число Фибоначчи для заданного значения
+            //рекурсивным способоми без рекурстии. 
+            var testFibonacciRecurse01 = new TestFibonacci()
             {
-                return number;
-            }
-            return GetFibonacci(number - 1) + GetFibonacci(number - 2);
+                Number = 3,
+                Expected = 2,
+                ExpectedException = null
+            };
+            testFibonacciRecurse01.Test(testFibonacciRecurse01);
+            var testFibonacciRecurse02 = new TestFibonacci()
+            {
+                Number = 12,
+                Expected = 144,
+                ExpectedException = null
+            };
+            testFibonacciRecurse02.Test(testFibonacciRecurse02);
+            var testFibonacciRecurse03 = new TestFibonacci()
+            {
+                Number = 0,
+                Expected = 0,
+                ExpectedException = null,
+            };
+            testFibonacciRecurse03.Test(testFibonacciRecurse03);
+            var testFibonacciRecurse04 = new TestFibonacci()
+            {
+                Number = -1,
+                //Должен Выдать: Тест провален, число не может быть отрицательным!
+                ExpectedException = null
+            };
+            testFibonacciRecurse04.Test(testFibonacciRecurse04);
+            var testFibonacciRecurse05 = new TestFibonacci()
+            {
+                Number = -150,
+                //Должен Выдать: Тест провален, число не может быть отрицательным!
+                ExpectedException = null
+            };
+            testFibonacciRecurse05.Test(testFibonacciRecurse05);
+            Console.ReadLine();
         }
     }
 }

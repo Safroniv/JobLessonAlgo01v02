@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestFibonacci.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
