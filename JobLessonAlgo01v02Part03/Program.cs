@@ -11,7 +11,7 @@ namespace JobLessonAlgo01v02Part03
         static void Main()
         {
             //Программа, вычисляющая число Фибоначчи для заданного значения
-            //рекурсивным способоми без рекурстии. 
+            //рекурсивным способом и без рекурстии. 
             var testFibonacciRecurse01 = new TestFibonacci()
             {
                 Number = 3,
