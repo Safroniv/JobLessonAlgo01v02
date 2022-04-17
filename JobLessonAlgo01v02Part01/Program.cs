@@ -6,6 +6,11 @@ namespace JobLessonAlgo01v02Part01
     {
         static void Main()
         {
+            NewMethod();
+        }
+
+        private static void NewMethod()
+        {
             var testCase1 = new TestCase()
             {
                 Number = 6,
@@ -34,7 +39,7 @@ namespace JobLessonAlgo01v02Part01
             {
                 Number = -50,
                 Expected = "Число -50 - Не простое число",
-                
+
                 ExpectedException = null
             };
             testCase1.Test();
@@ -42,6 +47,9 @@ namespace JobLessonAlgo01v02Part01
             testCase3.Test();
             testCase4.Test();
             testCase5.Test();
+            var testCase6 = new TestCase();
+            UserPrimeNumberOrNot(testCase6.Number);
+
             Console.ReadLine();
         }
     }
